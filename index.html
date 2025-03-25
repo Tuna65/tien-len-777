@@ -1,213 +1,274 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/grid.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./font/fontawesome-free-6.1.0-web/css/all.min.css">
-    <title>Interior Design Template</title>
-</head>
-<body>
-    <div class="app">
-        <div class="header">
-            <input type="checkbox" id="side__in" hidden class="side__in">
-            <label for="side__in">
-                <i class="fa-solid fa-bars"></i>
-            </label>
-            <span class="header__span">
-                Company Name
-            </span> 
-            <label for="side__in" class="lay_out"></label>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienlen777</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Trở thành tay choi TIENLEN đẳng cấp. Đăng ký ngay để nhận 10,000 Chips miễn phí!" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+      }
+      .desktop-img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+      }
+      .mobile-bg-img {
+        width: 100%;
+        height: auto;
+        display: none;
+      }
+      .content-container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .logo-img {
+        object-fit: contain;
+        margin-left: 10%;
+        width: 20%;
+      }
+      .slogane-img {
+        object-fit: contain;
+        margin-left: 3%;
+        transform: scale(0.85);
+        width: 55%;
+      }
+      .button-container {
+        margin-left: 4.5%;
+      }
+      .button-img {
+        width: 32%;
+        height: 20%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
+      .button-img:hover {
+        transform: scale(1.1);
+      }
+      .mobile-button-container {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1%;
+      }
+      .mobile-button-img {
+        transform: scale(0.75);
+        object-fit: contain;
+        margin-left: 1%;
+        transition: transform 0.3s ease;
+      }
+      .overflow {
+        height: 100vh;
+        overflow: hidden;
+      }
+      .mobile-button-img:hover {
+        transform: scale(0.9);
+      }
+      @media (max-width: 768px) {
+        .desktop-img {
+          display: none;
+        }
+        .mobile-bg-img {
+          display: block;
+        }
+        .content-container {
+          display: none;
+        }
+      }
+      @media (min-width: 769px) {
+        .mobile-button-container {
+          display: none;
+        }
+      }
+      @media (min-width: 1280px) {
+        .logo-img {
+          width: 25%;
+        }
+      }
+      @media (min-width: 1536px) {
+        .logo-img {
+          width: 20%;
+        }
+      }
 
-            <div class="sidebar__hidden">
-                <label class="close__menu" for="side__in">
-                    Close menu
-                </label>
-                <div class="sidebar__content">
-                    <h2>Company</h2>
-                    <h2>Name</h2>
-                    <ul class="sidebar__list">
-                        <li class="sidebar__list-options">Home</li>
-                        <li class="sidebar__list-options">Showcase</li>
-                        <li class="sidebar__list-options">Service</li>
-                        <li class="sidebar__list-options">Designer</li>
-                        <li class="sidebar__list-options">Packages</li>
-                        <li class="sidebar__list-options">Contact</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+      .gai-img {
+        width: 70%;
+        /* height: 100vh; */
+        object-fit: cover;
+      }
 
-        <div class="container">
-            <!-- sidebar -->
-            <div class="sidebar">
-                <div class="sidebar__content">
-                    <h2>Company</h2>
-                    <h2>Name</h2>
-                    <ul class="sidebar__list">
-                        <li class="sidebar__list-options">Home</li>
-                        <li class="sidebar__list-options">Showcase</li>
-                        <li class="sidebar__list-options">Service</li>
-                        <li class="sidebar__list-options">Designer</li>
-                        <li class="sidebar__list-options">Packages</li>
-                        <li class="sidebar__list-options">Contact</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="container__content">
-                <!-- content -->
-                <div class="content">
-    
-                    <!-- img -->
-                    <h3>Interior Design</h3>
-                    <span class="content__titles">
-                        Showcase.
-                    </span>
-                    <span class="content__bar content__bar-resize">
-                    </span>
-                    <div class="content__album grid">
-                        <div class="row">
-                            <div class="content__img col l-6">
-                                <img class="content_img-avt" src="./img/kitchenconcrete.jpg" alt="">
-                            </div>
-                            <div class="content__img col l-6">
-                                <img class="content_img-avt" src="./img/atrium.jpg" alt="">
-                            </div>
-                            <div class="content__img col l-6">
-                                <img class="content_img-avt" src="./img/livingroom.jpg" alt="">
-                            </div>
-                            <div class="content__img col l-6">
-                                <img class="content_img-avt" src="./img/bedroom.jpg" alt="">
-                            </div>
-                            <div class="content__img col l-6">
-                                <img class="content_img-avt" src="./img/diningroom.jpg" alt="">
-                            </div>
-                            <div class="content__img col l-6">
-                                <img class="content_img-avt" src="./img/livingroom2.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Services -->
-                    <h3>Services.</h3>
-                    <span class="content__bar content__bar-resize">
-                    </span>
-                    <p>We are a interior design service that focus on what's best for your home and what's best for you!</p>
-                    <p>Some text about our services - what we do and what we offer. We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    
-                    <!-- Designer -->
-                    <h3>Designer.</h3>
-                    <span class="content__bar content__bar-resize">
-                    </span>
-                    <p>The best team in the world.</p>
-                    <p>We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    
-                    <!-- card -->
-                    <div class="content__designer-selebrity">
-                        <p class="content__designer-selebrity-p">Our designers are thoughtfully chosen:</p>
-                        <div class="grid">
-                            <div class="row">
-                                <div class="selebrity__card col l-4">
-                                    <img class="selebrity__card-img" src="./img/team1.jpg" alt="">
-                                    <div class="selebrity__card-info">
-                                        <h4>John Doe</h4>
-                                        <span class="selebrity__card-info-office">CEO & Founder</span>
-                                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-                                    </div>
-                                </div>
-                                <div class="selebrity__card col l-4">
-                                    <img class="selebrity__card-img" src="./img/team2.jpg" alt="">
-                                    <div class="selebrity__card-info">
-                                        <h4>Jane Doe</h4>
-                                        <span class="selebrity__card-info-office">Designer</span>
-                                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-                                    </div>
-                                    
-                                </div>
-                                <div class="selebrity__card col l-4">
-                                    <img class="selebrity__card-img" src="./img/team3.jpg" alt="">
-                                    <div class="selebrity__card-info">
-                                        <h4>Mike Ross</h4>
-                                        <span class="selebrity__card-info-office">Architect</span>
-                                        <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <h3>Packages.</h3>
-                    <span class="content__bar content__bar-resize">
-                    </span>
-                    <p>Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
-                    
-    
-                    <!-- price -->
-                    <div class="price grid">
-                        <div class="row">
-                            <div class="price__col col l-6 m-6 c-12">
-                                <ul class="price__propertie">
-                                    <li class="price__propertie-about price__propertie-about-basic">Basic</li>
-                                    <li class="price__propertie-about">Floorplanning</li>
-                                    <li class="price__propertie-about">10 hours support</li>
-                                    <li class="price__propertie-about">Photography</li>
-                                    <li class="price__propertie-about">20% furniture discount</li>
-                                    <li class="price__propertie-about">Good deals</li>
-                                    <li class="price__propertie-about price__propertie-about-money">$ 199</li>
-                                    <li class="price__propertie-about price__propertie-about-room">per room</li>
-                                    <li class="price__propertie-about">
-                                        <button class="price__propertie-btn">
-                                            Sign Up 
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="price__col col l-6 m-6 c-12">
-                                <ul class="price__propertie">
-                                    <li class="price__propertie-about price__propertie-about-pro">Pro</li>
-                                    <li class="price__propertie-about">Floorplanning</li>
-                                    <li class="price__propertie-about">50 hours support</li>
-                                    <li class="price__propertie-about">Photography</li>
-                                    <li class="price__propertie-about">50% furniture discount</li>
-                                    <li class="price__propertie-about">Good deals</li>
-                                    <li class="price__propertie-about price__propertie-about-money">$ 249</li>
-                                    <li class="price__propertie-about price__propertie-about-room">per room</li>
-                                    <li class="price__propertie-about">
-                                        <button class="price__propertie-btn price__propertie-btn-pro">
-                                            Sign Up
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <!-- contact -->
-                    <h3>Contact.</h3>
-                    <span class="content__bar content__bar-resize">
-                    </span>
-                    <p>Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
-                    
-                    <form class="content__contact">
-                        <span class="content__contact-span">Name</span>
-                        <input class="content__contact-input" required type="text">
-                        <span class="content__contact-span">Email</span>
-                        <input class="content__contact-input" required type="text">
-                        <span class="content__contact-span">Massage</span>
-                        <input class="content__contact-input" required type="text">
-                        <button class="content__contact-btn">Send Massage</button>
-                    </form>
-                </div>
-                <!-- footer -->
-                <div class="footer">
-                    <span class="footer-span">Powered by<a href=""> w3.css</a></span>
-                </div>
-            </div>
+      .gai-img-container {
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .mb-logo-img-container {
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .mb-logo-img {
+        z-index: 2;
+        top: 0;
+        width: 40%;
+      }
+
+      .mb-slogan-img-container {
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        left: 0;
+        top: 20%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .mb-slogan-img {
+        z-index: 2;
+        top: 0;
+        width: 90%;
+      }
+      .bai1 {
+        top: 35%;
+        width: 20%;
+        left: 7%;
+      }
+
+      .bai2 {
+        top: 65%;
+        width: 20%;
+        right: 0%;
+      }
+      .bai3 {
+        top: 0%;
+        width: 23%;
+        right: 0%;
+      }
+
+      .bai {
+        position: absolute;
+        z-index: 2;
+      }
+
+      .tt {
+        position: absolute;
+        z-index: 3;
+        bottom: 10%;
+      }
+
+      .mobile-button-container {
+        position: absolute;
+        bottom: -1%;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        z-index: 3;
+        padding-top: 10px;
+      }
+      .button {
+        width: 70%;
+      }
+
+      .button:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="md:py-0 overflow">
+      <div>
+        <div class="md:flex hidden justify-center cursor-pointer relative">
+          <img src="img/pc/bg.png" alt="Desktop Background" class="desktop-img" />
+          <div class="content-container">
+            <img src="img/pc/logo_tl.png" alt="Logo" class="logo-img" />
+            <img src="img/pc/slogane.png" alt="Slogane" class="slogane-img" />
+            <a href="https://tienlen777.vip" target="_blank">
+              <div class="button-container">
+                <img src="img/pc/bt.png" alt="Button" class="button-img" />
+              </div>
+            </a>
+          </div>
         </div>
-        
-        
+        <div class="md:hidden flex justify-center cursor-pointer px-2 relative">
+          <img
+            src="img//mobile/bg.png"
+            alt="Mobile Background"
+            class="mobile-bg-img"
+          />
+          <div class="mb-logo-img-container">
+            <img
+              src="img//mobile/logo.png"
+              alt="Mobile Background"
+              class="mb-logo-img"
+            />
+          </div>
+          <img
+            src="img//mobile/labai1.png"
+            alt="Mobile Background"
+            class="bai1 bai"
+          /><img src="img//mobile/tt.png" alt="Mobile Background" class="tt" />
+          <img
+            src="img//mobile/labai2.png"
+            alt="Mobile Background"
+            class="bai2 bai"
+          />
+          <img
+            src="img//mobile/labai3.png"
+            alt="Mobile Background"
+            class="bai3 bai"
+          />
+          <div class="mb-slogan-img-container">
+            <img
+              src="img//mobile/slogan.png"
+              alt="Mobile Background"
+              class="mb-slogan-img"
+            />
+          </div>
+
+          <div class="gai-img-container">
+            <img
+              src="img//mobile/gai.png"
+              alt="Mobile Background"
+              class="gai-img"
+            />
+          </div>
+          <a href="https://tienlen777.vip" target="_blank">
+            <div class="mobile-button-container">
+              <img src="img/pc/bt.png" alt="Button" class="button" />
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
